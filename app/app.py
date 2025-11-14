@@ -61,7 +61,7 @@ def load_model():
         model = AutoModelForCausalLM.from_pretrained(
             "Qwen/Qwen2.5-3B-Instruct",
             device_map="mps",
-            torch_dtype=torch.float16,
+            dtype=torch.float16,
             trust_remote_code=True,
             low_cpu_mem_usage=True
         )
